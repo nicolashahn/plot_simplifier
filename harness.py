@@ -29,10 +29,17 @@ def image_from_rmlamp(input_file):
     return im
 
 def main(infile1, infile2):
+    len1 = len(open(infile1, "r").readlines())
+    len2 = len(open(infile2, "r").readlines())
     image1 = image_from_rmlamp(infile1)
     image2 = image_from_rmlamp(infile2)
 
-    print(diffimg.diff_inner(image1, image2, delete_diff_file=True))
+    print("{} length / {} length = {}/{} = {}".format(
+        infile1, infile2, len1, len2, float(len1)/float(len2)
+    ))
+    print("image difference: {}".format(
+        diffimg.diff_inner(image1, image2, delete_diff_file=True)
+    ))
 
 
 if __name__ == "__main__":
