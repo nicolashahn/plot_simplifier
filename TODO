@@ -1,0 +1,9 @@
+* simplifier: simplifies pen up/move/down into more abstract strokes
+  * input: rmlamp file
+  * output: rmlamp file
+* test harness: plots before / after + compares the two with differ
+  * input: rmlamp file
+  * output: 
+    * ratio difference (using diffimg)
+    * new image
+
